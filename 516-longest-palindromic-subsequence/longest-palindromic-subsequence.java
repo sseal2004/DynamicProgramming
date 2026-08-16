@@ -1,9 +1,8 @@
 class Solution {
     public int longestPalindromeSubseq(String s) {
-        StringBuilder s2 = new StringBuilder();
-        for(int i=s.length()-1;i>=0;i--){
-            s2.append(s.charAt(i));
-        }
+        StringBuilder s2 = new StringBuilder(s);
+       
+        s2.reverse();
         return lcs(s,s2.toString());
     }
     static int lcs(String s1,String s2){
